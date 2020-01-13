@@ -60,8 +60,8 @@ def nyc_pigeon_organizer(data)
   end
   pp populate_by_name(hash_with_names_as_keys, data)
 
-  greff = a_of_names.map {|name| populate_by_name(name, data)}
-  greff.each_with_object({}){|i,a| a}
+  # greff = a_of_names.map {|name| populate_by_name(name, data)}
+  # greff.each_with_object({}){|i,a| a}
 
 
   # final_hash = hash_with_names_as_keys.each_key do |key|
@@ -76,7 +76,7 @@ def nyc_pigeon_organizer(data)
 
   # pp hoh_names_and_traits
   # pp final_hash
-  puts hash_with_names_as_keys
+  # puts hash_with_names_as_keys
   # pp pigeon_data_keys
   # pp a_of_names
   # pp data_by_name
