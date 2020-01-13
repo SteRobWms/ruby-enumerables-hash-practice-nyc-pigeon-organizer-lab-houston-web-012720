@@ -38,23 +38,23 @@ def nyc_pigeon_organizer(data)
 
   # testlist = {}
 
-  def populate_by_name(name, data)
-    each_pigeon_hash = {}
+  def populate_by_name(name, pigeon_hash, data)
+    # each_pigeon_hash = {}
     data.each do |i, k|
       # puts data[i]
       data[i].each do |key, value|
         if value.include?(name)
-          if !each_pigeon_hash[name]
-            each_pigeon_hash[name] = {}
+          if !pigeon_hash[name]
+            pigeon_hash[name] = {}
           end
-          if !each_pigeon_hash[name][i]
-            each_pigeon_hash[name][i] = []
+          if !pigeon_hash[name][i]
+            pigeon_hash[name][i] = []
           end
-          each_pigeon_hash[name][i] << key.to_s
+          pigeon_hash[name][i] << key.to_s
         end
       end
     end
-    each_pigeon_hash
+    pigeon_hash
   end
   # pp populate_by_name("Queenie", data)
 
