@@ -38,7 +38,7 @@ def nyc_pigeon_organizer(data)
 
   # testlist = {}
 
-  def populate_by_name(name, pigeons_hash, data)
+  def populate_by_name(name, data)
     each_pigeon_hash = {}
     data.each do |i, k|
       # puts data[i]
