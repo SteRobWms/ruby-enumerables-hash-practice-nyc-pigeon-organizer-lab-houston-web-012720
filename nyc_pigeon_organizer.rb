@@ -58,7 +58,7 @@ def nyc_pigeon_organizer(data)
     end
     pigeon_hash
   end
-  puts populate_by_name(hash_with_names_as_keys, data)
+  populate_by_name(hash_with_names_as_keys, data)
 
   # greff = a_of_names.map {|name| populate_by_name(name, data)}
   # greff.each_with_object({}){|i,a| a}
