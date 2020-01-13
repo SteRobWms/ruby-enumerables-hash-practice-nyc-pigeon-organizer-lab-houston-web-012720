@@ -22,7 +22,7 @@ def nyc_pigeon_organizer(data)
 
   a_of_names = []
   data[:color].each {|key, value| a_of_names << value}
-  a_of_names.flatten!.uniq!.sort!
+  a_of_names.flatten!.uniq!
 
   hash_with_names_as_keys = a_of_names.to_h {|i| [i, {}]}
 
