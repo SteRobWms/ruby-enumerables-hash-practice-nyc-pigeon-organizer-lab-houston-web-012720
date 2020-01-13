@@ -38,7 +38,7 @@ def nyc_pigeon_organizer(data)
 
   # testlist = {}
 
-  def populate_by_name(name, pigeon_hash, data)
+  def populate_by_name(pigeon_hash, data)
     # each_pigeon_hash = {}
     data.each do |i, k|
       # puts data[i]
@@ -58,7 +58,7 @@ def nyc_pigeon_organizer(data)
     end
     pigeon_hash
   end
-  # pp populate_by_name("Queenie", data)
+  pp populate_by_name(hash_with_names_as_keys, data)
 
   greff = a_of_names.map {|name| populate_by_name(name, data)}
   greff.each_with_object({}){|i,a| a}
