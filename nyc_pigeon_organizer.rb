@@ -26,11 +26,11 @@ def nyc_pigeon_organizer(data)
 
   hash_with_names_as_keys = a_of_names.to_h {|i| [i, {}]}
 
-  pigeon_data_keys = {}
-  data.each_key {|key| pigeon_data_keys[key] = []}
+  # pigeon_data_keys = {}
+  # data.each_key {|key| pigeon_data_keys[key] = []}
 
-  hoh_names_and_traits = {}
-  hash_with_names_as_keys.each_key {|key| hoh_names_and_traits[key] = pigeon_data_keys}
+  # hoh_names_and_traits = {}
+  # hash_with_names_as_keys.each_key {|key| hoh_names_and_traits[key] = pigeon_data_keys}
 
   # digs and iterates two levels down
 
@@ -38,7 +38,7 @@ def nyc_pigeon_organizer(data)
 
   # testlist = {}
 
-  def populate_by_name(name, data)
+  def populate_by_name(name, pigeons_hash, data)
     each_pigeon_hash = {}
     data.each do |i, k|
       # puts data[i]
@@ -74,7 +74,7 @@ def nyc_pigeon_organizer(data)
 
   # pp hoh_names_and_traits
   # pp final_hash
-  # puts hash_with_names_as_keys
+  puts hash_with_names_as_keys
   # pp pigeon_data_keys
   # pp a_of_names
   # pp data_by_name
