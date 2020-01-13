@@ -43,14 +43,16 @@ def nyc_pigeon_organizer(data)
     data.each do |i, k|
       # puts data[i]
       data[i].each do |key, value|
-        if value.include?(name)
-          if !pigeon_hash[name]
-            pigeon_hash[name] = {}
+        pigeon_hash.each_key do |d|
+          if value.include? d
+            if !pigeon_hash[d]
+              pigeon_hash[d] = {}
+            end
+            if !pigeon_hash[d][i]
+              pigeon_hash[d][i] = []
+            end
+            pigeon_hash[d][i] << key.to_s
           end
-          if !pigeon_hash[name][i]
-            pigeon_hash[name][i] = []
-          end
-          pigeon_hash[name][i] << key.to_s
         end
       end
     end
